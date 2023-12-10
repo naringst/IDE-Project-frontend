@@ -30,6 +30,7 @@
     "sockjs-client": "^1.6.1",
     "stompjs": "^2.3.3",
     "styled-components": "^6.1.1",
+    "styled-reset": "^4.5.1",
     "xterm-for-react-18": "^1.0.28",
     "yorkie-js-sdk": "^0.4.10",
     "zustand": "^4.4.7"
