@@ -1,7 +1,7 @@
-import FileTree from "./FileTree/FileTree";
-import IDEHeader from "./IDEHeader";
-import { ContentContainer, IDEContainer } from "./IDEPage.style";
-import Toolbar from "./Toolbar";
+import FileTree from './FileTree/FileTree';
+import IDEHeader from './IDEHeader';
+import { ContentContainer, IDEContainer } from './IDEPage.style';
+import Toolbar from './Toolbar';
 
 const IDEPage = () => {
   return (
