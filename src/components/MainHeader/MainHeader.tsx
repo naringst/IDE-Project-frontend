@@ -1,8 +1,8 @@
-import useUserStore from "../../store/userStore";
-import StyledLink from "../../styles/StyledLink";
-import LoginSignUpHeader from "./LoginSignUpLink/LoginSignUpLink";
-import { HeaderContainer, Logo } from "./MainHeader.style";
-import UserInfo from "./UserInfo/UserInfo";
+import useUserStore from '../../store/userStore';
+import StyledLink from '../../styles/StyledLink';
+import LoginSignUpHeader from './LoginSignUpLink/LoginSignUpLink';
+import { HeaderContainer, Logo } from './MainHeader.style';
+import UserInfo from './UserInfo/UserInfo';
 
 const MainHeader = () => {
   const { isLoggedIn } = useUserStore();
@@ -13,7 +13,7 @@ const MainHeader = () => {
         <Logo>DJIDE</Logo>
         <StyledLink
           to="/mypage"
-          style={{ textDecoration: "none", color: "inherit" }}
+          style={{ textDecoration: 'none', color: 'inherit' }}
         >
           {isLoggedIn ? <UserInfo /> : <LoginSignUpHeader />}
         </StyledLink>

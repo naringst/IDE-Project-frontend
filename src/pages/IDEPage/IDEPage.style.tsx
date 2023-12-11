@@ -1,10 +1,10 @@
 import {
   HeaderContainer,
   Logo,
-} from "../../components/MainHeader/MainHeader.style";
-import styled from "styled-components";
-import { FONTS } from "../../constants/fonts";
-import { AiOutlineComment } from "react-icons/ai";
+} from '../../components/MainHeader/MainHeader.style';
+import styled from 'styled-components';
+import { FONTS } from '../../constants/fonts';
+import { AiOutlineComment } from 'react-icons/ai';
 
 export const IDEContainer = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ export const ToolbarContainer = styled.div`
   padding-top: 10px;
   width: 40px;
   height: calc(100vh - 60px);
-  background: ${(props) => props.theme.colors.headerBg};
+  background: ${props => props.theme.colors.headerBg};
 `;
 
 export const FileTreeConatiner = styled(ToolbarContainer)`
