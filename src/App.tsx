@@ -1,21 +1,25 @@
-import { ThemeProvider } from "styled-components";
-import { Reset } from "styled-reset";
-import GlobalStyle from "./styles/GlobalStyle";
-import useThemeStore from "./store/useThemeStore";
-import { AppRoutes } from "./routes/AppRoutes";
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import MainPage from "./pages/MainPage";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
+import IDEPage from "./pages/IDEPage";
+import MyPage from "./pages/MyPage";
+import ProjectPage from "./pages/ProjectPage";
+import GuestEnterPage from "./pages/GuestEnterPage";
 
-const App: React.FC = () => {
-  const { theme } = useThemeStore();
-
+function App() {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <Reset />
-        <GlobalStyle />
-        <AppRoutes />
-      </ThemeProvider>
-    </>
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/project" element={<ProjectPage />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/mypage" element={<MyPage />} />
+      <Route path="/guest-enter" element={<GuestEnterPage />} />
+      <Route path="/ide" element={<IDEPage />} />
+    </Routes>
   );
-};
+}
 
 export default App;
