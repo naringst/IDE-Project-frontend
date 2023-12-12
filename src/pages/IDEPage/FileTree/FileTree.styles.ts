@@ -45,3 +45,22 @@ export const FileDiv = styled.div`
   flex-direction: row;
   align-items: center;
 `;
+
+// 파일 생성
+
+export const CreateFileDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: right;
+`;
+
+export const FileButton = styled.button`
+  border: none;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+`;

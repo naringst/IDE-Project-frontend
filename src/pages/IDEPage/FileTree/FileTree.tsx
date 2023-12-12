@@ -1,6 +1,7 @@
 import { FileTreeConatiner } from './FileTree.styles';
 import { Tree } from 'react-arborist';
 import { Node } from './Node';
+import CreateFile from './CreateFile';
 
 export const data = [
   {
@@ -28,6 +29,7 @@ export const data = [
 const FileTree = () => {
   return (
     <FileTreeConatiner>
+      <CreateFile />
       <Tree className="react-aborist" data={data}>
         {nodeProps => <Node {...nodeProps} />}
       </Tree>
