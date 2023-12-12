@@ -1,8 +1,8 @@
-import useUserStore from '../../store/userStore';
-import StyledLink from '../../styles/StyledLink';
-import LoginSignUpHeader from './LoginSignUpLink/LoginSignUpLink';
-import { HeaderContainer, Logo } from './MainHeader.style';
-import UserInfo from './UserInfo/UserInfo';
+import useUserStore from "../../store/userStore";
+import StyledLink from "../../styles/StyledLink";
+import LoginSignUpLink from "./LoginSignUpLink/LoginSignUpLink";
+import { HeaderContainer, Logo } from "./MainHeader.style";
+import UserInfo from "./UserInfo/UserInfo";
 
 const MainHeader = () => {
   const { isLoggedIn } = useUserStore();
@@ -15,7 +15,7 @@ const MainHeader = () => {
           to="/mypage"
           style={{ textDecoration: 'none', color: 'inherit' }}
         >
-          {isLoggedIn ? <UserInfo /> : <LoginSignUpHeader />}
+          {isLoggedIn ? <UserInfo /> : <LoginSignUpLink />}
         </StyledLink>
       </HeaderContainer>
     </>
