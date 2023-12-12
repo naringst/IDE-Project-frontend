@@ -72,8 +72,3 @@ export const ToolbarContainer = styled.div`
   height: calc(100vh - 60px);
   background: ${props => props.theme.colors.headerBg};
 `;
-
-export const FileTreeConatiner = styled(ToolbarContainer)`
-  width: 300px;
-  background: #d9d9d9;
-`;
