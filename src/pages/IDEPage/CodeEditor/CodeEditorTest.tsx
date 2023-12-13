@@ -1,7 +1,10 @@
+import CodeMirrorEditor from './CodeMirrorEditor';
 import { CodeEditorContainer } from './CodeEditor.style';
 
-const CodeEditorTest = () => {
-  return <CodeEditorContainer>CodeEditorTest</CodeEditorContainer>;
+const CodeEditor = () => {
+  return <CodeEditorContainer>
+    <CodeMirrorEditor/>
+  </CodeEditorContainer>;
 };
 
-export default CodeEditorTest;
+export default CodeEditor;
