@@ -4,23 +4,59 @@ import {
   AiOutlineShareAlt,
   AiOutlineSound,
   AiOutlineAudio,
+  AiOutlineCode,
+  AiOutlineMenu,
 } from 'react-icons/ai';
-import { ToolbarContainer } from './Toolbar.style';
+import { BiMenu } from 'react-icons/bi';
+import {
+  Div,
+  ToolBarIconDiv,
+  ToolBarMenuDiv,
+  ToolBarUserDiv,
+  ToolbarContainer,
+} from './Toolbar.style';
 import { IconContext } from 'react-icons';
+import { UserProfile } from '../Header/IDEHeader.style';
+import TerminalIcon from '../../../assets/images/terminal-box-svgrepo-com.svg';
 
 const Toolbar = () => {
+  const user = { name: '지원' };
   return (
     <ToolbarContainer>
       <IconContext.Provider
         value={{
-          style: { width: '28px', height: '28px', margin: '0 0 15px 0' },
+          style: {
+            width: '27px',
+            height: '27px',
+            margin: '0 0 15px 0',
+          },
         }}
       >
-        <AiOutlineCopy />
-        <AiOutlinePicCenter />
-        <AiOutlineShareAlt />
-        <AiOutlineSound />
-        <AiOutlineAudio />
+        <Div>
+          <ToolBarMenuDiv>
+            <BiMenu />
+          </ToolBarMenuDiv>
+          <ToolBarIconDiv>
+            <AiOutlineCopy />
+          </ToolBarIconDiv>
+          <ToolBarIconDiv>
+            <AiOutlineCode />
+          </ToolBarIconDiv>
+        </Div>
+        <Div>
+          <ToolBarIconDiv>
+            <AiOutlineShareAlt />
+          </ToolBarIconDiv>
+          <ToolBarIconDiv>
+            <AiOutlineSound />
+          </ToolBarIconDiv>
+          <ToolBarIconDiv>
+            <AiOutlineAudio />
+          </ToolBarIconDiv>
+          <ToolBarUserDiv>
+            <UserProfile>{user.name}</UserProfile>
+          </ToolBarUserDiv>
+        </Div>
       </IconContext.Provider>
     </ToolbarContainer>
   );
