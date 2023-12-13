@@ -1,10 +1,9 @@
 import { styled } from 'styled-components';
-import { ToolbarContainer } from '../IDEPage.style';
+import { ToolbarContainer } from '../Toolbar/Toolbar.style';
 import { FONTS } from '../../../constants/fonts';
 
 export const FileTreeConatiner = styled(ToolbarContainer)`
   width: 300px;
-  padding: 10px 20px;
   background: #d9d9d9;
 `;
 

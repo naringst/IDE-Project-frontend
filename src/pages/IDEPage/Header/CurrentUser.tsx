@@ -1,10 +1,10 @@
-import { UserInfoType } from '../../types/user/UserTypes';
+import { UserInfoType } from '../../../types/user/UserTypes';
 import {
-  CurrentUserBox,
   RightBox,
-  StyleAiOutlineComment,
+  CurrentUserBox,
   UserProfile,
-} from './IDEPage.style';
+  StyleAiOutlineComment,
+} from './IDEHeader.style';
 
 const CurrentUser = () => {
   const currentUserList = [

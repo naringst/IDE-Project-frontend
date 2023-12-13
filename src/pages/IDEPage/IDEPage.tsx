@@ -1,7 +1,12 @@
 import FileTree from './FileTree/FileTree';
-import IDEHeader from './IDEHeader';
-import { IDEContentCode, ContentContainer, CodeContainer, IDEContainer } from './IDEPage.style';
-import Toolbar from './Toolbar';
+import IDEHeader from './Header/IDEHeader';
+import {
+  IDEContentCode,
+  ContentContainer,
+  CodeContainer,
+  IDEContainer,
+} from './IDEPage.style';
+import Toolbar from './Toolbar/Toolbar';
 // import Terminal from './Terminal/Terminal';
 
 const IDEPage = () => {
@@ -20,7 +25,6 @@ const IDEPage = () => {
           {/* <CodeEditor/>    */}
         </CodeContainer>
       </IDEContentCode>
-
     </IDEContainer>
   );
 };
