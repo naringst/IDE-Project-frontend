@@ -1,21 +1,37 @@
 import CodeMirrorEditor from './CodeMirrorEditor/CodeMirrorEditor';
+import Chatting from './Chatting/Chatting';
 import FileTree from './FileTree/FileTree';
-import IDEHeader from './IDEHeader';
-import { ContentContainer, IDEContainer } from './IDEPage.style';
-import Toolbar from './Toolbar';
+import IDEHeader from './Header/IDEHeader';
+import {
+  IDEContentCode,
+  ContentContainer,
+  IDEContainer,
+  Section,
+} from './IDEPage.style';
+import CodeEditorTest from './CodeEditor/CodeEditorTest';
+import TerminalTest from './Terminal/TerminalTest';
+import Toolbar from './Toolbar/Toolbar';
+// import Terminal from './Terminal/Terminal';
 
 const IDEPage = () => {
   return (
     <IDEContainer>
       <IDEHeader />
-      <ContentContainer>
-        <Toolbar />
-        <FileTree />
-        <CodeMirrorEditor />
-      </ContentContainer>
+      <IDEContentCode>
+        <ContentContainer>
+          <Toolbar />
+          <FileTree />
+        </ContentContainer>
 
-      {/* <Terminal/> */}
-      {/* <CodeEditor/>    */}
+        <Section>
+          <CodeMirrorEditor />
+          <CodeEditorTest />
+          <TerminalTest />
+          {/* <Terminal /> */}
+        </Section>
+
+        <Chatting />
+      </IDEContentCode>
     </IDEContainer>
   );
 };
