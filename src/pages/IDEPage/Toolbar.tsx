@@ -13,7 +13,7 @@ const Toolbar = () => {
     <ToolbarContainer>
       <IconContext.Provider
         value={{
-          style: { width: '30px', height: '30px', margin: '0 0 15px 0' },
+          style: { width: '28px', height: '28px', margin: '0 0 15px 0' },
         }}
       >
         <AiOutlineCopy />

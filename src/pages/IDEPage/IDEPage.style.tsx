@@ -30,12 +30,12 @@ export const CodeContainer = styled.div`
 `;
 
 export const IDEHeaderContainer = styled(HeaderContainer)`
-  height: 40px;
+  height: 48px;
   padding-top: 0px;
 `;
 
 export const IDELogo = styled(Logo)`
-  font-size: ${FONTS.md};
+  font-size: ${FONTS.lg};
 `;
 
 export const StyleAiOutlineComment = styled(AiOutlineComment)`
@@ -62,11 +62,11 @@ export const CurrentUserBox = styled.div`
 
 export const UserProfile = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  margin: 0 3px;
+  width: 28px;
+  height: 28px;
+  margin: 0 4px;
   border-radius: 50%;
   background: pink;
   font-size: ${FONTS.xs};
@@ -79,7 +79,7 @@ export const ToolbarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 10px;
-  width: 40px;
+  width: 48px;
   height: calc(100vh - 60px);
   background: ${props => props.theme.colors.headerBg};
 `;
