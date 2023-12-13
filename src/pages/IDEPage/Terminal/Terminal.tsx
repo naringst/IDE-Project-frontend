@@ -11,10 +11,6 @@ interface Content {
 }
 const projectId = 1;
 
-// TODO
-// projectId 연결
-// xterm-addon-fit 사용하여 터미널 크기 조절
-
 const Terminal = () => {
   const [currentPath, setCurrentPath] = useState<string>('/');
   const [commands, setCommands] = useState<string[]>([]);
