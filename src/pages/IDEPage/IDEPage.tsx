@@ -1,19 +1,26 @@
 import FileTree from './FileTree/FileTree';
 import IDEHeader from './IDEHeader';
-import { ContentContainer, IDEContainer } from './IDEPage.style';
+import { IDEContentCode, ContentContainer, CodeContainer, IDEContainer } from './IDEPage.style';
 import Toolbar from './Toolbar';
+// import Terminal from './Terminal/Terminal';
 
 const IDEPage = () => {
   return (
     <IDEContainer>
       <IDEHeader />
-      <ContentContainer>
-        <Toolbar />
-        <FileTree />
-      </ContentContainer>
 
-      {/* <Terminal/> */}
-      {/* <CodeEditor/>    */}
+      <IDEContentCode>
+        <ContentContainer>
+          <Toolbar />
+          <FileTree />
+        </ContentContainer>
+
+        <CodeContainer>
+          {/* <Terminal/> */}
+          {/* <CodeEditor/>    */}
+        </CodeContainer>
+      </IDEContentCode>
+
     </IDEContainer>
   );
 };
