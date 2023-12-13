@@ -1,3 +1,4 @@
+import CodeMirrorEditor from './CodeMirrorEditor/CodeMirrorEditor';
 import Chatting from './Chatting/Chatting';
 import FileTree from './FileTree/FileTree';
 import IDEHeader from './Header/IDEHeader';
@@ -16,7 +17,6 @@ const IDEPage = () => {
   return (
     <IDEContainer>
       <IDEHeader />
-
       <IDEContentCode>
         <ContentContainer>
           <Toolbar />
@@ -24,10 +24,10 @@ const IDEPage = () => {
         </ContentContainer>
 
         <Section>
+          <CodeMirrorEditor />
           <CodeEditorTest />
           <TerminalTest />
           {/* <Terminal /> */}
-          {/* <CodeEditor/>    */}
         </Section>
 
         <Chatting />
