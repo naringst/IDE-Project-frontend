@@ -1,3 +1,4 @@
+import CodeMirrorEditor from './CodeMirrorEditor/CodeMirrorEditor';
 import FileTree from './FileTree/FileTree';
 import IDEHeader from './IDEHeader';
 import { ContentContainer, IDEContainer } from './IDEPage.style';
@@ -10,6 +11,7 @@ const IDEPage = () => {
       <ContentContainer>
         <Toolbar />
         <FileTree />
+        <CodeMirrorEditor />
       </ContentContainer>
 
       {/* <Terminal/> */}

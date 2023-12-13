@@ -1,4 +1,3 @@
-import React from 'react';
 import { FileTreeConatiner } from '../IDEPage.style';
 
 const FileTree = () => {
