@@ -6,7 +6,7 @@ const Chatting = () => {
     <Resizable
       defaultSize={{
         width: '300px',
-        height: '100%', // 초기 높이 설정
+        height: '(100vh - 48px)',
       }}
       enable={{
         top: false, // 위쪽으로만 리사이징 가능

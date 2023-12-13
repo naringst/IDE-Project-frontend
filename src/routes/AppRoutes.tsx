@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import MainPage from '../pages/MainPage/MainPage';
-import ProjectPage from '../pages/ProjectPage/ProjectPage';
-import Login from '../pages/LoginPage/Login';
-import SignUp from '../pages/SignUpPage/SignUp';
-import MyPage from '../pages/MyPage/MyPage';
-import GuestEnterPage from '../pages/GuestEnterPage/GuestEnterPage';
-import IDEPage from '../pages/IDEPage/IDEPage';
+import MainPage from '../pages/MainPage/index';
+import ProjectPage from '../pages/ProjectPage/index';
+import Login from '../pages/LoginPage/index';
+import SignUp from '../pages/SignUpPage/index';
+import MyPage from '../pages/MyPage/index';
+import GuestEnterPage from '../pages/GuestEnterPage/index';
+import IDEPage from '../pages/IDEPage/index';
 import MainLayout from '../layout/MainLayout';
 
 export const AppRoutes = () => {
