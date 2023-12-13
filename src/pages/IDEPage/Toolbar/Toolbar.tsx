@@ -1,11 +1,9 @@
 import {
-  AiOutlinePicCenter,
   AiOutlineCopy,
   AiOutlineShareAlt,
   AiOutlineSound,
   AiOutlineAudio,
   AiOutlineCode,
-  AiOutlineMenu,
 } from 'react-icons/ai';
 import { BiMenu } from 'react-icons/bi';
 import {
@@ -17,7 +15,6 @@ import {
 } from './Toolbar.style';
 import { IconContext } from 'react-icons';
 import { UserProfile } from '../Header/IDEHeader.style';
-import TerminalIcon from '../../../assets/images/terminal-box-svgrepo-com.svg';
 
 const Toolbar = () => {
   const user = { name: '지원' };
