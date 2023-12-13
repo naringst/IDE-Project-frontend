@@ -3,7 +3,7 @@ import SockJS from 'sockjs-client';
 import { Client, IMessage } from '@stomp/stompjs';
 import { Terminal as XTerm } from 'xterm';
 import 'xterm/css/xterm.css';
-import { TerminalContainer } from '../IDEPage.style'
+import { TerminalContainer } from './Terminal.style';
 
 interface Content {
   path: string;
@@ -25,45 +25,52 @@ const Terminal = () => {
       xterm.write('/: ');
     }
 
-    const client = new Client({ // SockJS 라이브러리를 사용하여 웹 소켓 연결 시도
+    const client = new Client({
+      // SockJS 라이브러리를 사용하여 웹 소켓 연결 시도
       webSocketFactory: () => new SockJS('ws://localhost:8080/ws/ide'),
-      onConnect: () => { // 연결 성공 시 실행될 콜백 함수
-        client.subscribe(`/queue/project/${projectId}/terminal`, (message: IMessage) => { // 구독
-          const { path, command } = JSON.parse(message.body) as Content;
-          if(command){
-            xterm.write(path + ': ' + command + '\r\n');
+      onConnect: () => {
+        // 연결 성공 시 실행될 콜백 함수
+        client.subscribe(
+          `/queue/project/${projectId}/terminal`,
+          (message: IMessage) => {
+            // 구독
+            const { path, command } = JSON.parse(message.body) as Content;
+            if (command) {
+              xterm.write(path + ': ' + command + '\r\n');
+            }
+            xterm.write(path + ': ');
+            setCurrentPath(path);
+            console.log(`path: ${path}, command: ${command}`);
           }
-          xterm.write(path + ': ');
-          setCurrentPath(path);
-          console.log(`path: ${path}, command: ${command}`);
-        });
+        );
 
         let currentCommand = '';
-        xterm.onData(data => { // 키보드 입력 시 서버로 메시지 전송
+        xterm.onData(data => {
+          // 키보드 입력 시 서버로 메시지 전송
           currentCommand += data;
           xterm.write(data); // 내 터미널에도 입력값 보여주기
-        })
+        });
 
-        xterm.onKey((keyEvent) => {
+        xterm.onKey(keyEvent => {
           const { key } = keyEvent;
-          
+
           if (key === '\r') {
             const content: Content = {
               path: currentPath,
-              command: currentCommand
+              command: currentCommand,
             };
-            client.publish({ 
-              destination: `/app/project/${projectId}/terminal`, 
-              body: JSON.stringify(content) 
+            client.publish({
+              destination: `/app/project/${projectId}/terminal`,
+              body: JSON.stringify(content),
             });
             setCommands(prevCommands => [...prevCommands, currentCommand]);
             console.log(commands);
             currentCommand = '';
           }
-        })
+        });
       },
-      
-      onStompError: (frame) => {
+
+      onStompError: frame => {
         console.error('Broker reported error: ' + frame.headers['message']);
         console.error('Additional details: ' + frame.body);
       },
@@ -80,16 +87,20 @@ const Terminal = () => {
           console.error('Error deactivating client:', error);
         }
       };
-  
+
       deactivateClient();
     };
-  }, []);
+  });
 
   return (
-  <TerminalContainer>
-    <div ref={terminalRef} id="terminal-container" style={{ height: '100%', width: '100%' }}></div>
-  </TerminalContainer>
+    <TerminalContainer>
+      <div
+        ref={terminalRef}
+        id="terminal-container"
+        style={{ height: '100%', width: '100%' }}
+      ></div>
+    </TerminalContainer>
   );
-}
+};
 
 export default Terminal;

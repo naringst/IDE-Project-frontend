@@ -1,7 +1,15 @@
+import Chatting from './Chatting/Chatting';
 import FileTree from './FileTree/FileTree';
-import IDEHeader from './IDEHeader';
-import { IDEContentCode, ContentContainer, CodeContainer, IDEContainer } from './IDEPage.style';
-import Toolbar from './Toolbar';
+import IDEHeader from './Header/IDEHeader';
+import {
+  IDEContentCode,
+  ContentContainer,
+  IDEContainer,
+  Section,
+} from './IDEPage.style';
+import CodeEditorTest from './CodeEditor/CodeEditorTest';
+import TerminalTest from './Terminal/TerminalTest';
+import Toolbar from './Toolbar/Toolbar';
 // import Terminal from './Terminal/Terminal';
 
 const IDEPage = () => {
@@ -15,12 +23,15 @@ const IDEPage = () => {
           <FileTree />
         </ContentContainer>
 
-        <CodeContainer>
-          {/* <Terminal/> */}
+        <Section>
+          <CodeEditorTest />
+          <TerminalTest />
+          {/* <Terminal /> */}
           {/* <CodeEditor/>    */}
-        </CodeContainer>
-      </IDEContentCode>
+        </Section>
 
+        <Chatting />
+      </IDEContentCode>
     </IDEContainer>
   );
 };
