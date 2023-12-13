@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiOutlineFolderAdd, AiOutlineFileAdd } from 'react-icons/ai';
 import { CreateFileDiv, FileButton } from './FileTree.styles';
 
