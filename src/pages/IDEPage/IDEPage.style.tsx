@@ -22,3 +22,11 @@ export const CodeContainer = styled.div`
   flex-direction: column;
   flex-grow: 1;
 `;
+
+export const Section = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* 남은 공간을 메인 영역이 채움 */
+  height: 100%;
+  margin: 0;
+`;

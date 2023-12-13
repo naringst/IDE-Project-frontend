@@ -8,5 +8,12 @@ export const TerminalContainer = styled.div`
   bottom: 0;
   height: 300px;
   width: 100%;
-  background: #d9d9d9;
+  background: red;
+`;
+
+export const TerminalTestContainer = styled.div`
+  border-top: 2px solid ${props => props.theme.colors.primary};
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
 `;

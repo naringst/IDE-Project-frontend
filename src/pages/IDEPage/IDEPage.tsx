@@ -1,11 +1,14 @@
+import Chatting from './Chatting/Chatting';
 import FileTree from './FileTree/FileTree';
 import IDEHeader from './Header/IDEHeader';
 import {
   IDEContentCode,
   ContentContainer,
-  CodeContainer,
   IDEContainer,
+  Section,
 } from './IDEPage.style';
+import CodeEditorTest from './CodeEditor/CodeEditorTest';
+import TerminalTest from './Terminal/TerminalTest';
 import Toolbar from './Toolbar/Toolbar';
 // import Terminal from './Terminal/Terminal';
 
@@ -20,10 +23,14 @@ const IDEPage = () => {
           <FileTree />
         </ContentContainer>
 
-        <CodeContainer>
-          {/* <Terminal/> */}
+        <Section>
+          <CodeEditorTest />
+          <TerminalTest />
+          {/* <Terminal /> */}
           {/* <CodeEditor/>    */}
-        </CodeContainer>
+        </Section>
+
+        <Chatting />
       </IDEContentCode>
     </IDEContainer>
   );

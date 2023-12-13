@@ -1,10 +1,17 @@
 import { styled } from 'styled-components';
-import { ToolbarContainer } from '../Toolbar/Toolbar.style';
 import { FONTS } from '../../../constants/fonts';
 
-export const FileTreeConatiner = styled(ToolbarContainer)`
-  width: 300px;
+export const FileTreeConatiner = styled.div`
+  width: 100%;
   background: #d9d9d9;
+  box-sizing: border-box;
+  flex-direction: column;
+  border-top: 2px solid ${props => props.theme.colors.bg};
+  border-right: 3px solid ${props => props.theme.colors.primary};
+  border-left: 2px solid ${props => props.theme.colors.bg};
+  align-items: center;
+  height: calc(100vh - 51px);
+  background: ${props => props.theme.colors.headerBg};
 `;
 
 export const NodeContainer = styled.div`
