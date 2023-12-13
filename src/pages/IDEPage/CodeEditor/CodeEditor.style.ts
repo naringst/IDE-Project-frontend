@@ -5,4 +5,5 @@ export const CodeEditorContainer = styled.div`
   background: green;
   flex-grow: 1;
   margin: 0;
+  overflow-y: scroll;
 `;

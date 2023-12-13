@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const IDEContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  max-height: (100vh - 48px);
 `;
 
 export const IDEContentCode = styled.div`
