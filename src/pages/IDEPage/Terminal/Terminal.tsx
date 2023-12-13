@@ -90,7 +90,7 @@ const Terminal = () => {
 
       deactivateClient();
     };
-  }, []);
+  });
 
   return (
     <TerminalContainer>
