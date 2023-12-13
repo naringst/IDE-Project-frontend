@@ -12,9 +12,20 @@ export const IDEContainer = styled.div`
   height: 100vh;
 `;
 
+export const IDEContentCode = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+`;
+
 export const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const CodeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
 `;
 
@@ -71,4 +82,20 @@ export const ToolbarContainer = styled.div`
   width: 40px;
   height: calc(100vh - 60px);
   background: ${props => props.theme.colors.headerBg};
+`;
+
+export const FileTreeConatiner = styled(ToolbarContainer)`
+  width: 300px;
+  background: #d9d9d9;
+`;
+
+export const TerminalContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  height: 300px;
+  width: 100%;
+  background: #d9d9d9;
 `;
