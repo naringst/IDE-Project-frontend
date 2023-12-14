@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 
 export const IDEContainer = styled.div`
-  display: flex;
   flex-direction: column;
-  max-height: (100vh - 48px);
+  max-width: 100%;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
 `;
 
 export const IDEContentCode = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
@@ -26,7 +32,8 @@ export const CodeContainer = styled.div`
 export const Section = styled.div`
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* 남은 공간을 메인 영역이 채움 */
-  height: 100%;
-  margin: 0;
+  flex-grow: 1;
+  max-height: calc(100vh - 50px);
+  width: 100%;
+  overflow: hidden;
 `;

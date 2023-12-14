@@ -1,9 +1,8 @@
 import { styled } from 'styled-components';
 
 export const CodeEditorContainer = styled.div`
-  display: flex;
-  background: green;
-  flex-grow: 1;
-  margin: 0;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 50px);
   overflow-y: scroll;
 `;
