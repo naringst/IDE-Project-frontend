@@ -75,9 +75,9 @@ const CodeMirrorEditor = () => {
         completionKeymap: true,
         lintKeymap: true,
       }}
-      height='100%'
+      height="500px"
       minWidth={'500px'}
-      minHeight={'500px'}
+      minHeight={'100vh'}
       autoFocus={true}
     />
   );

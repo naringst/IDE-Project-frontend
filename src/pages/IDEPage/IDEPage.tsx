@@ -1,5 +1,5 @@
-import CodeMirrorEditor from './CodeEditor/CodeMirrorEditor';
 import Chatting from './Chatting/Chatting';
+import CodeEditor from './CodeEditor/CodeEditor';
 import FileTree from './FileTree/FileTree';
 import IDEHeader from './Header/IDEHeader';
 import {
@@ -10,7 +10,6 @@ import {
 } from './IDEPage.style';
 import TerminalTest from './Terminal/TerminalTest';
 import Toolbar from './Toolbar/Toolbar';
-// import Terminal from './Terminal/Terminal';
 
 const IDEPage = () => {
   return (
@@ -19,15 +18,13 @@ const IDEPage = () => {
       <IDEContentCode>
         <ContentContainer>
           <Toolbar />
-          <FileTree />
         </ContentContainer>
+        <FileTree />
 
         <Section>
-          <CodeMirrorEditor />
+          <CodeEditor />
           <TerminalTest />
-          {/* <Terminal /> */}
         </Section>
-
         <Chatting />
       </IDEContentCode>
     </IDEContainer>

@@ -3,7 +3,6 @@ import SockJS from 'sockjs-client';
 import { Client, IMessage } from '@stomp/stompjs';
 import { Terminal as XTerm } from 'xterm';
 import 'xterm/css/xterm.css';
-import { TerminalContainer } from './Terminal.style';
 
 interface Content {
   path: string;
@@ -93,13 +92,11 @@ const Terminal = () => {
   });
 
   return (
-    <TerminalContainer>
-      <div
-        ref={terminalRef}
-        id="terminal-container"
-        style={{ height: '100%', width: '100%' }}
-      ></div>
-    </TerminalContainer>
+    <div
+      ref={terminalRef}
+      id="terminal-container"
+      style={{ height: '100%', width: '100%' }}
+    ></div>
   );
 };
 

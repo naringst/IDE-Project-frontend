@@ -19,7 +19,7 @@ export const ToolBarIconDiv = styled.div`
   height: 50px;
   cursor: pointer;
   box-sizing: border-box;
-  border-left: 3px solid transparent;
+  border-left: 1px solid transparent;
 
   &:hover {
     border-left-color: ${props => props.theme.colors.primary};
