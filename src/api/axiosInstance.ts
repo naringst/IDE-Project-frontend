@@ -5,10 +5,11 @@ const headers = {
   'Access-Control-Allow-Origin': '*',
 };
 
-const instance = axios.create({
+const axiosInstance = axios.create({
   baseURL: process.env.REACT_APP_API_BASE_URL,
   headers: headers,
   withCredentials: true,
 });
 
-export default instance;
+
+export default axiosInstance;
