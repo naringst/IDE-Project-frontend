@@ -9,7 +9,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prettify": "prettier --write .",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "server": "json-server --watch db.json --port 3003"
   },
   "dependencies": {
     "@codemirror/commands": "^6.1.2",
